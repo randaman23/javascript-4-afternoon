@@ -163,7 +163,7 @@ var module = (function() {
     }
   };
 })();
-module.publicMethod()
+// module.publicMethod()
 ////////// PROBLEM 7 //////////
 
 /*
@@ -177,7 +177,14 @@ function secretNumber() {
   var secret = 143;
 
   return {
-    // Code here
+    addToSecret: function(param){
+      secret += param
+      return secret
+    },
+    takeAwayFromSecret: function(param){
+      secret -= param
+      return secret
+    }
   };
 }
 

@@ -14,7 +14,10 @@
 */
 
 // Code here
-
+function CarFactory(make, model){
+  this.make = make
+  this.model = model
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -31,8 +34,7 @@ function Employee(name, email, hireDate) {
   Invoke the constructor function above and pass in 'Bob', 'bob@gmail.com', and '01-02-98' as arguments.
   Assign the result of the invocation to a variable called bob.
 */
-
-// Code here
+  var bob = new Employee('Bob','bob@gmail.com', '01-02-98')
 
 
 
@@ -54,5 +56,14 @@ mustang.moveCar(); // Increments mustang' move property by 10. Returns the new m
 */
 
 // Code here
+function Car(company, model, year, move){
+  this.company = company
+  this.model = model
+  this.year = year
+  var move = 0
+  this.moveCar = function(){
+    return move + 10
+  } 
+}
 
 
